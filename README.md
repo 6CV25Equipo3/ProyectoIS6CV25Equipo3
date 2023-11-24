@@ -1,1 +1,0 @@
-# ProyectoIS6CV25Equipo3
