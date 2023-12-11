@@ -5,16 +5,16 @@
 
 // Función para obtener la lista actualizada de nombres de alumnos
 function obtenerNombresAlumnos() {
-    var tablaBody = document.getElementById('tabla-body');
-    var filas = tablaBody.getElementsByTagName('tr');
+    let tablaBody = document.getElementById('tabla-body');
+    let filas = tablaBody.getElementsByTagName('tr');
     return Array.from(filas).map(fila => {
-        var celdas = fila.getElementsByTagName('td');
+        let celdas = fila.getElementsByTagName('td');
         return celdas.length > 0 ? celdas[0].innerText : '';
     });
 }
 
 export function eliminarAlumno() {
-    var nombresAlumnos = obtenerNombresAlumnos();
+    let nombresAlumnos = obtenerNombresAlumnos();
 
     if (nombresAlumnos.length === 0) {
         alert('No hay registros para eliminar.');
@@ -22,7 +22,7 @@ export function eliminarAlumno() {
     }
 
     // Crear y mostrar el modal de Bootstrap
-    var modalHTML = `
+    let modalHTML = `
         <div class="modal fade" id="modalEliminarAlumno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -45,35 +45,35 @@ export function eliminarAlumno() {
     `;
 
     // Eliminar el modal anterior si existe
-    var modalAnterior = document.getElementById('modalEliminarAlumno');
+    let modalAnterior = document.getElementById('modalEliminarAlumno');
     if (modalAnterior) {
         modalAnterior.remove();
     }
 
-    var modalContainer = document.createElement('div');
+    let modalContainer = document.createElement('div');
     modalContainer.innerHTML = modalHTML;
     document.body.appendChild(modalContainer);
 
     // Inicializar el modal de Bootstrap
-    var modal = new bootstrap.Modal(document.getElementById('modalEliminarAlumno'));
+    let modal = new bootstrap.Modal(document.getElementById('modalEliminarAlumno'));
     modal.show();
 }
 
 // Función llamada al hacer clic en el botón "Eliminar" del modal
 window.eliminarAlumnoSeleccionado = function () {
-    var selectAlumnos = document.getElementById('selectAlumnos');
-    var nombreAlumno = selectAlumnos.value;
+    let selectAlumnos = document.getElementById('selectAlumnos');
+    let nombreAlumno = selectAlumnos.value;
 
     if (!nombreAlumno) {
         alert('Seleccione un alumno válido.');
         return;
     }
 
-    var tablaBody = document.getElementById('tabla-body');
-    var filas = tablaBody.getElementsByTagName('tr');
+    let tablaBody = document.getElementById('tabla-body');
+    let filas = tablaBody.getElementsByTagName('tr');
 
-    var filaEncontrada = Array.from(filas).find(fila => {
-        var celdas = fila.getElementsByTagName('td');
+    let filaEncontrada = Array.from(filas).find(fila => {
+        let celdas = fila.getElementsByTagName('td');
         return celdas.length > 0 && celdas[0].innerText === nombreAlumno;
     });
 
@@ -82,7 +82,7 @@ window.eliminarAlumnoSeleccionado = function () {
         return;
     }
 
-    var confirmacion = confirm('¿Está seguro de que desea eliminar al alumno ' + nombreAlumno + '?');
+    let confirmacion = confirm('¿Está seguro de que desea eliminar al alumno ' + nombreAlumno + '?');
 
     if (confirmacion) {
         tablaBody.removeChild(filaEncontrada);
@@ -92,6 +92,6 @@ window.eliminarAlumnoSeleccionado = function () {
     }
 
     // Cerrar el modal después de la acción
-    var modalInstance = bootstrap.Modal.getInstance(document.getElementById('modalEliminarAlumno'));
+    let modalInstance = bootstrap.Modal.getInstance(document.getElementById('modalEliminarAlumno'));
     modalInstance.hide();
 };

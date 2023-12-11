@@ -1,10 +1,10 @@
 body {
-    background-color: #008000;
+    background-color: #009d0e;
     margin: 0;
     padding: 0;
 }
 
-.modificarTitulo h1{
+.modificarTitulo h1 {
     font-size: 3em;
     font-weight: 650;
 }
@@ -19,7 +19,7 @@ body {
 .form-control {
     border-width: 4px !important;
     border-color: black !important;
-    
+
     /* Puedes ajustar el valor según tus preferencias */
 }
 
@@ -64,30 +64,81 @@ body {
     color: #070707;
     font-weight: 700;
 }
+.formatoDeBotonesMenu {
+    color: #070707;
+    font-weight: 700;
+    width: calc(100% - 500px); /* Ocupa todo el ancho del contenedor con un espacio de 20px en cada lado */
+    padding: 10px; /* Ajusta el espacio de relleno según tus preferencias */
+    box-sizing: border-box; /* Incluye el relleno en el ancho total del botón */
+}
 
 /* Anular el cambio de color de fondo en el hover del botón btn-primary */
 /* Modificar el color de fondo y color activo en el hover para btn-primary y btn-secondary */
 .btn-primary:hover,
 .btn-secondary:hover {
+
     --bs-btn-hover-color: #070707;
     --bs-btn-active-color: #070707;
+
 }
+
 
 .btn-primary,
 .btn-secondary {
     background-color: #ffffff !important;
     border-color: black !important;
     border-width: 3px !important;
+
     /* Grosor del texto, puedes ajustar según tus preferencias */
 }
 
 /* Estilo para la tabla */
 .table-bordered {
-    border: 3px solid black; /* Borde negro con grosor de 3px */
+    border: 3px solid black;
+    /* Borde negro con grosor de 3px */
 }
 
 /* Estilo para la primera fila (thead) */
 
-.filasSombreadasDeLaTabla th{
-    background-color:#cccccc ;
+.filasSombreadasDeLaTabla th {
+    background-color: #cccccc;
+    font-weight: 700;
+}
+
+.filasSombreadasDeLaTabla td {
+    background-color: #cccccc;
+    font-weight: 700;
+}
+
+/*.btnInicioPaseLista{
+
+
+}*/
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.logi-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+/* Ajuste de tamaño para las imágenes */
+.logo-image {
+    width: 100px;
+    height: 100px;
+}
+
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 50px; /* Espaciado para mejorar la apariencia */
 }
