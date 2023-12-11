@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+<style>
+
+body {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 25px; 
+        }
+
+.center-table {
+            margin: auto;
+        } 
+
+table {
+ width: 90%;
+ border-collapse: collapse;
+ background-color: #f2f2f2;
+}
+th, td {
+ border: 4px solid black;
+ padding: 8px;
+ text-align: center;
+}
+th {
+ background-color: #f2f2f2;
+}
+
+.button-container {
+            text-align: right;
+            margin-top: 0px;
+            margin-right: 76px;
+        }
+
+.dropdown-container {
+        text-align: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+  
+.dropdown-menu {
+    margin-right: 0px; /* Ajusta este valor para la separación deseada */
+    }
+
+</style>
+<title>TABLA DE HORARIOS</title>
+</head>
+<body>
+    <h1>TABLA DE HORARIOS</h1>
+ <!-- CICLOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+ <div class="dropdown-container">
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ciclo
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.3/components/dropdowns/">24/1</a></li>
+          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.3/components/dropdowns/">24/2</a></li>
+          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.3/components/dropdowns/">25/1</a></li>
+        </ul>
+      </div>
+   <!---->
+   <br>
+<table class="center-table">
+ <tr>
+    <th>Hora</th>
+    <th>Laboratorio</th>
+    <th>Lunes</th>
+    <th>Martes</th>
+    <th>Miércoles</th>
+    <th>Jueves</th>
+    <th>Viernes</th>
+ </tr>
+ <tr>
+    <td>00:00</td>
+    <td>1/2</td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+
+ </tr>
+ <tr>
+    <td>00:00</td>
+    <td>1/2</td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+
+ </tr>
+ <tr>
+    <td>00:00</td>
+    <td>1/2</td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+
+ </tr>
+ <tr>
+    <td>00:00</td>
+    <td>1/2</td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction()">GRUPO</button></td>
+
+ </tr>
+ <tr>
+    <td>00:00</td>
+    <td>1/2</td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction46()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction47()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction48()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction49()">GRUPO</button></td>
+    <td><button onclick="myFunction()">GRUPO</button><br><br><button onclick="myFunction50()">GRUPO</button></td>
+</tr>
+</table>
+
+<br>
+<div class="button-container">
+    <button onclick="editarGrupo()">Editar grupo</button>
+    <button onclick="regresar()">Regresar</button>
+</div>
+
+<script>
+    function myFunction() {
+        window.location.href = "PaginaDeAsistencia.html";
+    };
+
+//BOTONES DEL FINAL
+    function editarGrupo() {
+            window.location.href = "EditarGrupos.html";
+    }
+
+    function regresar() {
+            window.location.href = "pantallamenu.html";
+    }
+</script>
+
+<style>
+    body {
+        background-color: #008000;
+    }
+
+</style>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro Grupos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    intgrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <style>   
+
+
+
+    p.fs-1 {
+      margin: 0px 0;
+      /* Ajusta el margen para mejorar la apariencia */
+      text-align: left;
+      /* Alinea el texto a la izquierda */
+    }
+
+    p.fs-2 {
+      text-align: center;
+      position: center;
+    }
+
+    .dropdown {
+      position: relative;
+      top: -50px;
+      margin-left: 330px;
+      /* Ajusta el margen del menú desplegable para mejorar la apariencia */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Caja del título -->
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-12 text-center py-3 modificarTitulo">
+        <h1>Resistro Grupos </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Año -->
+  <p class="fs-1">Año</p>
+  <div class="dropdown" id="dropdownYear">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Seleccionar Opciones
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" multiple>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownYear', '2022')">2022</a></li>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownYear', '2023')">2023</a></li>
+    </ul>
+  </div>
+
+  <!-- Ciclo -->
+  <p class="fs-1">Ciclo</p>
+  <div class="dropdown" id="dropdownCycle">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Seleccionar Opciones
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" multiple>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownCycle', '/1')">/1</a></li>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownCycle', '/2')">/2</a></li>
+    </ul>
+  </div>
+
+  <!-- Semestre -->
+  <p class="fs-1">Semestre</p>
+  <div class="dropdown" id="dropdownSemester">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Seleccionar Opciones
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" multiple>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownSemester', '1')">1</a></li>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownSemester', '2')">2</a></li>
+    </ul>
+  </div>
+
+  <!-- Nombre Materia -->
+  <p class="fs-1">Nombre Materia</p>
+  <div class="dropdown" id="dropdownSubject">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Seleccionar Opciones
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" multiple>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownSubject', 'sistemas operativos')">sistemas
+          operativos</a></li>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownSubject', 'modulacion digital')">modulacion
+          digital</a></li>
+    </ul>
+  </div>
+
+  <!-- Código Materia -->
+  <p class="fs-1">Codigo Materia</p>
+  <div class="dropdown" id="dropdownCode">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Seleccionar Opciones
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" multiple>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownCode', '6cv22')">6cv22</a></li>
+      <li><a class="dropdown-item" href="#" onclick="updateButton('dropdownCode', '6cv23')">6cv23</a></li>
+    </ul>
+  </div>
+  <!-- Numero de lab -->
+  <p class="fs-1">Número de Laboratorio</p>
+  <div class="dropdown" id="dropdownCode">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Seleccionar Opciones
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" multiple>
+      <li><a class="dropdown-item" href="#" >1</a></li>
+      <li><a class="dropdown-item" href="#" >2</a></li>
+    </ul>
+  </div>
+
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end fixed-bottom">
+    <a href="pantallamenu.html" class="btn btn-primary me-md-2">Regresar</a>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script>
+    function updateButton(dropdownId, option) {
+      const dropdown = document.getElementById(dropdownId);
+      const button = dropdown.querySelector('.btn-secondary');
+      button.innerHTML = option;
+    }
+  </script>
+</body>
+
+</html>
